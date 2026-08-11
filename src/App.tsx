@@ -28,9 +28,9 @@ function App() {
         <About />
         <Services />
         <Portfolio />
-        <CaseStudies />
+      
         <Pricing />
-        <Testimonials />
+        
         <FAQ />
         <Contact />
         <Footer />

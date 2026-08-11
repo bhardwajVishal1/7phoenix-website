@@ -6,9 +6,9 @@ const navLinks = [
   { name: "About", href: "#about" },
   { name: "Services", href: "#services" },
   { name: "Portfolio", href: "#portfolio" },
-  { name: "Case Studies", href: "#case-studies" },
+ 
   { name: "Pricing", href: "#pricing" },
-  { name: "Testimonials", href: "#testimonials" },
+  
   { name: "FAQ", href: "#faq" },
   { name: "Contact", href: "#contact" },
 ];
@@ -23,21 +23,17 @@ function Navbar() {
 
           {/* Logo */}
 
-         <a
+        <a
   href="#home"
-  className="flex items-center gap-3"
+  className="flex items-center"
 >
   <img
-    src="public/logo.jpg"
+    src="public/logo-Photoroom.png"
     alt="7PHOENIX Logo"
-    className="h-12 w-auto object-contain"
+    className="h-14 w-auto object-contain scale-[7.10] translate-y-2"
   />
-
-  <span className="text-3xl font-bold tracking-widest text-white">
-    <span className="text-orange-500">7</span>PHOENIX
-  </span>
 </a>
-
+ 
           {/* Desktop Menu */}
 
           <div className="hidden lg:flex items-center gap-8">

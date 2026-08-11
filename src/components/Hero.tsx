@@ -1,93 +1,114 @@
-import { ArrowRight, PlayCircle } from "lucide-react";
+import { ArrowUpRight, Award } from "lucide-react";
 
 function Hero() {
   return (
     <section
       id="home"
-      className="relative h-screen w-full flex items-center"
+      className="relative min-h-screen w-full text-white overflow-hidden"
     >
-      {/* Content */}
+      {/* Hero Content */}
+      <div className="relative z-10 min-h-screen">
+        <div className="max-w-[1800px] mx-auto px-8 lg:px-[5%] pt-32 lg:pt-36">
 
-      <div className="relative z-10 w-full">
-        <div className="max-w-7xl mx-auto px-6 lg:px-12">
+          {/* Eyebrow */}
+          <div className="flex items-center gap-3 mb-10">
+            <Award
+              size={20}
+              strokeWidth={1.5}
+              className="text-white/80"
+            />
 
-          <span className="inline-block px-4 py-2 border border-orange-500 rounded-full text-orange-400 uppercase tracking-widest text-xs">
-            Digital Marketing Agency
-          </span>
-
-          <h1 className="mt-8 text-5xl md:text-7xl lg:text-8xl font-black leading-tight text-white">
-            Grow Your
-            <br />
-            <span className="text-orange-500">
-              Business Online
+            <span className="uppercase tracking-[7px] text-sm lg:text-base text-white/75">
+              World-Class Digital Agency
             </span>
+          </div>
+
+          {/* Main Heading */}
+          <h1
+            className="
+              uppercase
+              text-white
+              font-normal
+              text-[64px]
+              sm:text-[72px]
+              md:text-[82px]
+              lg:text-[96px]
+              xl:text-[105px]
+              leading-[0.92]
+              tracking-[-2px]
+              max-w-[700px]
+              relative
+              z-10
+            "
+          >
+            DESIGN.
+            <br />
+            DISRUPT.
+            <br />
+            CONQUER.
           </h1>
 
-          <p className="mt-8 text-white/70 max-w-2xl text-lg leading-8">
-            7PHOENIX helps startups and businesses dominate the digital world through SEO,
-            Social Media Marketing, Branding, Paid Advertising, Website Development,
-            Content Creation and Performance Marketing.
-          </p>
+          {/* CTA + Award */}
+          <div className="flex flex-wrap items-center gap-8 mt-12">
 
-          {/* Buttons */}
-
-          <div className="flex flex-wrap gap-5 mt-10">
-
-            <a
-              href="#contact"
-              className="flex items-center gap-2 bg-orange-500 hover:bg-orange-600 transition px-8 py-4 rounded-full font-semibold"
-            >
-              Get Free Consultation
-              <ArrowRight size={20} />
-            </a>
-
+            {/* See Our Work */}
             <a
               href="#portfolio"
-              className="flex items-center gap-2 border border-white text-white hover:border-orange-500 hover:text-orange-500 transition px-8 py-4 rounded-full"
+              className="
+                group
+                inline-flex
+                items-center
+                gap-4
+                bg-black
+                text-white
+                px-8
+                py-5
+                text-sm
+                uppercase
+                tracking-[2px]
+                font-semibold
+                hover:bg-orange-500
+                transition-all
+                duration-300
+              "
             >
-              View Portfolio
-              <PlayCircle size={20} />
+              See Our Work
+
+              <ArrowUpRight
+                size={20}
+                className="
+                  group-hover:translate-x-1
+                  group-hover:-translate-y-1
+                  transition-transform
+                "
+              />
             </a>
 
-          </div>
+            {/* Top Rated */}
+            <div className="flex items-center gap-4">
 
-          {/* Stats */}
+              <Award
+                size={42}
+                strokeWidth={1.2}
+                className="text-white/70"
+              />
 
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 mt-20">
+              <div className="leading-tight">
+                <p className="text-xs uppercase tracking-[2px] text-white/50">
+                  Top-Rated
+                </p>
 
-            <div>
-              <h2 className="text-5xl font-bold text-orange-500">500+</h2>
-              <p className="mt-2 text-white/70">Projects Completed</p>
-            </div>
+                <p className="text-sm uppercase tracking-[2px] text-white/80">
+                  Brand Studio
+                </p>
+              </div>
 
-            <div>
-              <h2 className="text-5xl font-bold text-orange-500">300+</h2>
-              <p className="mt-2 text-white/70">Happy Clients</p>
-            </div>
-
-            <div>
-              <h2 className="text-5xl font-bold text-orange-500">98%</h2>
-              <p className="mt-2 text-white/70">Client Satisfaction</p>
-            </div>
-
-            <div>
-              <h2 className="text-5xl font-bold text-orange-500">24/7</h2>
-              <p className="mt-2 text-white/70">Support</p>
             </div>
 
           </div>
 
         </div>
       </div>
-
-      {/* Scroll Indicator */}
-
-      <div className="absolute bottom-10 left-1/2 -translate-x-1/2 z-20 animate-bounce">
-        <div className="w-6 h-10 border-2 border-white rounded-full flex justify-center">
-          <div className="w-1 h-3 bg-white rounded-full mt-2"></div>
-        </div>
-      </div>
-
     </section>
   );
 }
